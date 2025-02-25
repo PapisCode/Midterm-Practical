@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MainComponent from "../component/MainComponent";
+import MainComponent from "../components/MainComponent";
 import ItemList from "../components/ItemList";
 import ItemDetails from "../components/ItemDetails";
 import styles from "../styles/Home.module.css";
