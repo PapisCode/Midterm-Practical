@@ -2,11 +2,16 @@ import { useState } from "react";
 import styles from "../styles.ItemList.module.css";
 
 export default function ItemList({ items, onSelect, addItem }) {
-    const [newItem, setNewItem] = useState(" ");
+    const [newItem, setNewItem] = useState("");
+    const [error, setError] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (newItem.trim() === "") return;
+        if (newItem.trim() === "") {
+            setError("Item cannot be empty");
+            return;
+        }
+        setError("");
         addItem(newItem);
         setNewItem("");
 };
@@ -14,26 +19,27 @@ export default function ItemList({ items, onSelect, addItem }) {
 return (
     <div className={styles.listContainer}>
         <h2>Item List</h2>
-        <ul>
             {items.length > 0 ? (
-                items.map((item, index) => (
+                <ul>
+                {items.map((item, index) => (
                     <li key={index} onClick={() => onSelect(item)}>
                         {item}
                         </li>
-                ))
+                ))}
+                </ul>
                 ) : (
                 <p>No items found.</p>
             )}
-        </ul>
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 value={newItem}
                 onChange={(e) => setNewItem(e.target.value)}
-                placeholder="Add an item"
+                placeholder="Add new item"
             />
             <button type="submit">Add</button>
         </form>
+        {error && <p className={styles.error}>{error}</p>}
         </div>
 );
 }
