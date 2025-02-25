@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles/ItemDetails.module.css";
 
 export default function ItemDetails({ item }) {
-    const [selecteditem, setSelectedItem] = useState(item);
+    const [selectedItem, setSelectedItem] = useState(item);
 
     useEffect(() => {
         setSelectedItem(item);
@@ -11,10 +11,10 @@ export default function ItemDetails({ item }) {
     return (
         <div className={styles.detailsContainer}>
             <h2>Artist Details</h2>
-            <p>Selected Artist: {selectedItem.name}</p>
+            <p><strong>Selected Artist:</strong> {selectedItem.name}</p>
             <h3>Latest Albums:</h3>
             <ul>
-                {selectedItem.albums.length > 0 ? (
+                {selectedItem.albums && selectedItem.albums.length > 0 ? (
                     selectedItem.albums.map((album, index) => <li key={index}>{album}</li>)
                 ) : (
                     <p>No albums available</p>
