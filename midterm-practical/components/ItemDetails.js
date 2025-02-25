@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "../styles/ItemDetails.modules.css";
+import styles from "../styles/ItemDetails.module.css";
 
 export default function ItemDetails({ item }) {
     const [selecteditem, setSelectedItem] = useState(item);
