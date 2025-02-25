@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MainComponent from "../component/MainComponent";
 import ItemList from "../components/ItemList";
 import ItemDetails from "../components/ItemDetails";
 import styles from "../styles/Home.module.css";
@@ -14,7 +15,7 @@ export default function HomePage() {
 
 return (
   <div className={styles.container}>
-    <h1>Midterm Practical App</h1>
+    <MainComponent />
     <ItemList items={items} setSelectedItem={setSelectedItem} addItem={additem} />
     {selectedItem && <ItemDetails item={selectedItem} />}
     </div>
