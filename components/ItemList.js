@@ -7,7 +7,7 @@ export default function ItemList({ items, onSelect, addItem }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (newItem.trim() === "") return;
-        addItem(mewItem);
+        addItem(newItem);
         setNewItem("");
 };
 
