@@ -13,15 +13,10 @@ export default function HomePage() {
 
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const addItem = (item) => {
-    if (item.trim() === "") return;
-  setItems([...items, {name: item, albums: []}]);
-};
-
 return (
   <div className={styles.container}>
     <MainComponent />
-    <ItemList items={items} onSelect={setSelectedItem} addItem={addItem} />
+    <ItemList items={items} onSelect={setSelectedItem} />
     {selectedItem && <ItemDetails item={selectedItem} />}
     </div>
 );
