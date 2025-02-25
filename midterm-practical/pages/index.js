@@ -16,7 +16,7 @@ export default function HomePage() {
 return (
   <div className={styles.container}>
     <MainComponent />
-    <ItemList items={items} setSelectedItem={setSelectedItem} addItem={additem} />
+    <ItemList items={items} onSelect={setSelectedItem} addItem={additem} />
     {selectedItem && <ItemDetails item={selectedItem} />}
     </div>
 );
