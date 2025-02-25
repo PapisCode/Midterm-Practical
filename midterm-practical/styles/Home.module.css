@@ -4,6 +4,27 @@
   padding: 20px;
 }
 
+/* styles/MainComponent.module.css */
+.mainContainer {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.mainContainer h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.mainContainer p {
+font-size: 16px;
+color: #666;
+}
+
 /* styles/ItemList.module.css */
 .listContainer {
   margin-top: 20px;
