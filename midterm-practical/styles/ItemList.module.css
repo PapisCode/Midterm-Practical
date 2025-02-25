@@ -1,0 +1,45 @@
+.listContainer {
+    margin-top: 20px;
+}
+
+.listContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listContainer li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    transition: background 0.3s;
+}
+
+.listContainer li:hover {
+    background-color: #e0e0e0;
+}
+
+.listContainer form {
+    margin-top: 10px;
+}
+
+.listContainer input {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.listContainer button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.listContainer button:hover {
+    background-color: #0056b3;
+}

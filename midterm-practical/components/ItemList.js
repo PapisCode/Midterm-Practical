@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styles.ItemList.module.css";
+import styles from "../styles/ItemList.module.css";
 
 export default function ItemList({ items, onSelect, addItem }) {
     const [newItem, setNewItem] = useState("");
