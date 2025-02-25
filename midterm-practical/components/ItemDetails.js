@@ -10,8 +10,16 @@ export default function ItemDetails({ item }) {
     
     return (
         <div className={styles.detailsContainer}>
-            <h2>Item Details</h2>
-            <p>Selected Item: {item}</p>
+            <h2>Artist Details</h2>
+            <p>Selected Artist: {selectedItem.name}</p>
+            <h3>Latest Albums:</h3>
+            <ul>
+                {selectedItem.albums.length > 0 ? (
+                    selectedItem.albums.map((album, index) => <li key={index}>{album}</li>)
+                ) : (
+                    <p>No albums available</p>
+                )}
+            </ul>
             </div>
     );
 }
