@@ -9,7 +9,7 @@ export default function HomePage() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const addItem = (item) => {
-    if (item.trim() ==="") return;
+    if (item.trim() === "") return;
   setItems([...items, item]);
 };
 
