@@ -18,7 +18,7 @@ return (
             {items.length > 0 ? (
                 items.map((item, index) => (
                     <li key={index} onClick={() => onSelect(item)}>
-                        {item}
+                        {item.name}
                         </li>
                 ))
                 ) : (

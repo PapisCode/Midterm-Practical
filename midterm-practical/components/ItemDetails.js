@@ -7,18 +7,20 @@ export default function ItemDetails({ item }) {
     useEffect(() => {
         setSelectedItem(item);
     }, [item]);
+
+    if (!selectedItem) {
+        return <p>No artist selected</p>
+    }
     
     return (
         <div className={styles.detailsContainer}>
             <h2>Artist Details</h2>
-            <p><strong>Selected Artist:</strong> {selectedItem.name}</p>
-            <h3>Latest Albums:</h3>
+            <p><strong>Name:</strong> {selectedItem.name}</p>
+            <h3>Albums:</h3>
             <ul>
-                {selectedItem.albums && selectedItem.albums.length > 0 ? (
-                    selectedItem.albums.map((album, index) => <li key={index}>{album}</li>)
-                ) : (
-                    <p>No albums available</p>
-                )}
+                {selectedItem.albums.map((album, index) => (
+                    <li key={index}>{album}</li>
+                ))}
             </ul>
             </div>
     );
