@@ -14,7 +14,7 @@ export default function ItemDetails({ item }) {
     
     return (
         <div className={styles.detailsContainer}>
-            <h2>Artist Details</h2>
+            <h2 className={styles.heading}>Artist Details</h2>
             <p><strong>Name:</strong> {selectedItem.name}</p>
             <h3>Albums:</h3>
             <ul>

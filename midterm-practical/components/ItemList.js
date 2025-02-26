@@ -13,7 +13,7 @@ export default function ItemList({ items, onSelect, addItem }) {
 
 return (
     <div className={styles.listContainer}>
-        <h2>Artist List</h2>
+        <h2 className={styles.heading}>Artist List</h2>
         <ul>
             {items.length > 0 ? (
                 items.map((item, index) => (

@@ -6,9 +6,9 @@ export default function MainComponent() {
 
     return (
     <div className={styles.mainContainer}>
-        <h1>Welcome to the Midterm Practical App</h1>
+        <h1 className={styles.title}>Welcome to the Midterm Practical App</h1>
         {WelcomeMessage && <p>Select and item from the list or add a new one.</p>}
-        <button onClick ={() => setWelcomeMessage(false)}>Hide Message</button>
+        <button className={styles.button} onClick ={() => setWelcomeMessage(false)}>Hide Message</button>
         </div>
         );
 }
